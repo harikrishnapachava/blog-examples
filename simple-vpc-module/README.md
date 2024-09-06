@@ -1,10 +1,10 @@
 <!-- BEGIN_TF_DOCS -->
 
 ## Requirements
-The following requirements are needed by this module:
 
+The following requirements are needed
 - [terraform] ~> 1.9.0
-- [aws provider plugin] >= 5.60.0
+- [terraform aws provider plugin] ~> 5.60.0
 
 ## Inputs
 
@@ -22,6 +22,7 @@ The below inputs need to be passed. If we dont pass the inputs, the default valu
 
 
 ## Resources
+
 The below aws resources will be created
 
 | Name |
@@ -37,13 +38,15 @@ The below aws resources will be created
 | Route table associations |
 
 
-## The below outputs will be displayed
+## Outputs
 
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
-| vpc_id | VPC ID  |
-| public_subnet_ids | List of Public Subnet IDs created |
-| private_subnet_ids | List of Private Subnet IDs created |
+The below outputs will be displayed
+
+| Name | Description |
+|------|-------------|
+| vpc_id | ID of the VPC that is created |
+| public_subnet_ids | List of Public Subnet IDs that are created |
+| private_subnet_ids | List of Private Subnet IDs that are created |
 
 
 
