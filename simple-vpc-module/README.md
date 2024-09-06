@@ -11,7 +11,7 @@ The following requirements are needed by this module:
 The below inputs need to be passed. If we dont pass the inputs, the default values listed below will be taken
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
+|------|-------------|------|---------|--------|
 | region | AWS region in which the VPC should be creted | string | ap-south-1 | yes |
 | environment | Specify the environment name. Accepted values are production/staging | string | production | yes |
 | vpc_cidr | The IPv4 CIDR block for the VPC | string | 10.0.0.0/16 | yes |
@@ -35,6 +35,15 @@ The below aws resources will be created
 | Routes |
 | Route tables |
 | Route table associations |
+
+
+## The below outputs will be displayed
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| vpc_id | VPC ID  |
+| public_subnet_ids | List of Public Subnet IDs created |
+| private_subnet_ids | List of Private Subnet IDs created |
 
 
 
