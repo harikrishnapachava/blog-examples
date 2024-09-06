@@ -2,56 +2,6 @@
 
 ## Requirements
 
-The following requirements are needed
-- [terraform] ~> 1.9.0
-- [terraform aws provider plugin] ~> 5.60.0
-
-## Inputs
-
-The below inputs need to be passed. If we dont pass the inputs, the default values listed below will be taken
-
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|--------|
-| region | AWS region in which the VPC should be creted | string | ap-south-1 | yes |
-| environment | Specify the environment name. Accepted values are production/staging | string | production | yes |
-| vpc_cidr | The IPv4 CIDR block for the VPC | string | 10.0.0.0/16 | yes |
-| vpc_name | Name for the VPC | string | production-vpc | yes |
-| availability_zones | List of availability zones | list(string) | ["ap-south-1a", "ap-south-1b"] | yes |
-| public_subnet_cidrs | CIDR blocks for public subnets | list(string) | ["10.0.2.0/24", "10.0.4.0/24"] | yes |
-| private_subnet_cidrs | CIDR blocks for private subnets | list(string) | ["10.0.1.0/24", "10.0.3.0/24"] | yes |
-
-
-## Resources
-
-The below aws resources will be created
-
-| Name |
-|------|
-| VPC |
-| Internet gateway |
-| Elastic IPs for NAT gateways |
-| NAT gateways |
-| Public Subnets |
-| Private Subnets |
-| Routes |
-| Route tables |
-| Route table associations |
-
-
-## Outputs
-
-The below outputs will be displayed
-
-| Name | Description |
-|------|-------------|
-| vpc_id | ID of the VPC that is created |
-| public_subnet_ids | List of Public Subnet IDs that are created |
-| private_subnet_ids | List of Private Subnet IDs that are created |
-
-
-
-## Requirements
-
 The following requirements are needed by this module:
 
 - <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) (~> 1.5.0)
